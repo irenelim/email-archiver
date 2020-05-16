@@ -10,11 +10,14 @@
 7. sorting array of email object according to header key.
 
 ### Mission 2
-1. popup for easy access and close of email's detail.
-2. UX & UI: 
+
+#### UI for display email details
+
 header | content(n) | row click
 ------ | ---------- | ---------
 subject | sender's email, receiver's email(hide at first place), attachment icon + datetime display on right, email body, (opt)attachments list at the bottom | show and hide the ...rest of the content(n)
+1. popup/modal for easy access and close of email's detail.
+2. modal body
 3. taking care for n correspondences of a subject. same UX UI repeated.
 
 #### working files including:
