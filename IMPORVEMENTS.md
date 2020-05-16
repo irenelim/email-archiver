@@ -1,0 +1,10 @@
+## Improvements
+- [ ] don't a complete system need navigation menu at least on it?
+- [ ] add `sender name`, `receiver name` next to their email.
+- [ ] confusion of badge purpose. `badge`+n, if it means the total times of communication on the same subject, `+` sign should be ommited, as the plus may indicate new or unread emails.
+- [ ] Clicking on the Header allow sorting, the **icon** of `asc` and `desc` need to be interchangable.
+- [ ] **Search function expansion**: search by `has attachment`, `keywords`, `sender`, `receiver`, single and multiple conditions filtering.
+- [ ] for archive purpose, suggest to add in email **categorize ability**. 
+- [ ] improvements in mobile view on **readability**, Maybe simple row stripes difference may help.
+- [ ] improvements on **accessibility**, especially on the search function, the main functions --> datepicker, and the search results.
+- [ ] add a user's choice or predefined **colour theme** for the system including buttons, background, table, header, list, etc

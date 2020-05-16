@@ -1,38 +1,101 @@
-.App {
+.daterange {
+  background-color: #fff !important;
+  padding-left: 2.325rem;
+}
+
+.pointer,
+.pointer input {
+  cursor: pointer;
+}
+
+.calendar {
+  background: url(./assets/images/icon_calender.svg) center/1.25rem no-repeat ;
+  position: absolute;
+  z-index: 5;
+  display: block;
+  width: 2.325rem;
+  height: 2.325rem;
+  line-height: 2.325rem;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
   pointer-events: none;
+  color: #aaa;
+}
+hr {
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.archive-logo{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.table-ellipsis tbody .truncate {
+  max-width: 420px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-ellipsis thead th{
+  cursor: pointer;
 }
+
+tr.email-row:hover td,
+tr.email-row:active td, 
+tr.email-row:visited td, 
+tr.email-row:focus td{
+  cursor: pointer;
+  text-decoration: none;
+  color: blue;
+}
+.search{
+  width: 20px; height: 20px;
+  background: url(./assets/images/icon_search.svg) center/1.25rem no-repeat;
+}
+
+.ascending{
+  width: 20px; height: 20px;
+  background: url(./assets/images/icon_arrow01.svg) bottom center/.6rem no-repeat;
+}
+.detail{
+  cursor: pointer;
+  width: 20px; height: 20px;
+  background: url(./assets/images/icon_arrow02.svg) bottom center/.33rem no-repeat;
+}
+.attachment{
+  width: 20px; height: 20px;
+  background: url(./assets/images/icon_clip.svg) bottom center/15px no-repeat;
+}
+.mail-sp{
+  width: 20px; height: 54px;
+  background: url(./assets/images/icon_mail_sp.svg) top left/15px 50px no-repeat;
+}
+
+.table-ellipsis tbody+tbody{
+  border-top: none;
+}
+
+.table-ellipsis tbody tr:last-child{
+  border-bottom: 1px solid #dee2e6;
+}
+
+.mob-subject{
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .table-ellipsis tbody .truncate {
+    max-width: 150px;
+  }
+  .table-ellipsis tbody tr > td:nth-child(3) .truncate{
+    max-width: 250px;
+  }
+
+}
+
+
