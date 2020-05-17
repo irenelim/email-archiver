@@ -3,6 +3,7 @@
 - [ ] add `sender name`, `receiver name` next to their email.
 - [ ] confusion of badge purpose. `badge`+n, if it means the total times of communication on the same subject, `+` sign should be ommited, as the plus may indicate new or unread emails.
 - [ ] Clicking on the Header allow sorting, the **icon** of `asc` and `desc` need to be interchangable.
+- [ ] have pagination if the result is more than a certain number.
 - [ ] **Search function expansion**: search by `has attachment`, `keywords`, `sender`, `receiver`, single and multiple conditions filtering.
 - [ ] for archive purpose, suggest to add in email **categorize ability**. 
 - [ ] improvements in mobile view on **readability**, Maybe simple row stripes difference may help.
