@@ -34,8 +34,11 @@ hr {
   height: 60vh;
 }
 
+.table-ellipsis{
+  table-layout: fixed;
+}
+
 .table-ellipsis tbody .truncate {
-  max-width: 180px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -64,8 +67,8 @@ tr.email-row:focus td{
 }
 .detail{
   cursor: pointer;
-  width: 20px; height: 20px;
-  background: url(./assets/images/icon_arrow02.svg) bottom center/.33rem no-repeat;
+  width: 15px; height: 15px;
+  background: url(./assets/images/icon_arrow02.svg) bottom right/.33rem no-repeat;
 }
 .attachment{
   width: 20px; height: 20px;
@@ -86,16 +89,26 @@ tr.email-row:focus td{
 
 .table-ellipsis tbody .truncate.mob-subject{
   font-size: 1.2rem;
-  max-width: 300px;
+}
+
+.on-rt{
+  width: 150px;
+  text-align: right;
+}
+.on-rt2{
+  width: 25px;
+}
+
+.ow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: none;
 }
 
 @media (min-width: 768px) {
-
-  .table-ellipsis tbody .truncate {
-    max-width: 150px;
-  }
-  .table-ellipsis tbody tr > td:nth-child(3) .truncate{
-    max-width: 250px;
+  .table-ellipsis .attachment{
+    width: 45px;
+    background-position: bottom right;
   }
 
 }

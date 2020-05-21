@@ -195,12 +195,14 @@ function App() {
               <tr className="row email-row" key={email.id}
                 onClick={() => {setShowModal(true);setEmailGroup(email)}}
               >
-                <td className="w-100">
+                <td className="container">
+                <div className="d-flex flex-column">
+                
                   <div className="container"><div className="row">
                     <div className="col-1 p-0 mail-sp"></div>
                     <div className="col p-0">
 
-                      <div className="d-flex justify-content-between align-items-center">   
+                      <div className="d-flex justify-content-between">   
                         <div className={`truncate font-weight-${isHighlight===initialHeader[0].id?"bold":"normal"}`}>
                           {email.emailFrom}
                         </div>
@@ -221,10 +223,10 @@ function App() {
 
                     </div>                    
                   </div></div>
+                  
+                  <div className={`mob-subject truncate font-weight-${isHighlight===initialHeader[2].id?"bold":"normal"}`}>{email.subject}</div>                    
 
-                  <div className={`d-flex justify-content-between align-items-center font-weight-${isHighlight===initialHeader[2].id?"bold":"normal"}`}>
-                    <span className="mob-subject truncate">{email.subject}</span>                    
-                  </div>                
+                </div>               
                 </td>
               </tr >              
             ))
@@ -247,14 +249,14 @@ function App() {
               onClick={()=> setToggles({...toggles, [emailGroup.id]: toggles[emailGroup.id]===undefined? true: !toggles[emailGroup.id]})
               }
             >
-              <div className="d-flex w-100 justify-content-between">
-                <div className="font-weight-bold mb-1">{emailGroup.emailFrom}</div>                
-                <small className="text-muted">{!!emailGroup.attachment && <span className="d-inline-block attachment"></span>}
+              <div className="d-flex flex-wrap flex-md-nowrap w-100 justify-content-between">
+                <div className="w-100 ow font-weight-bold mb-1">{emailGroup.emailFrom}</div>                
+                <small className="w-100 text-muted text-md-right">{!!emailGroup.attachment && <span className="d-inline-block attachment"></span>}
                   {moment().isSame(moment(emailGroup.datetime), 'day') ? moment(emailGroup.datetime).format("h:mm a") :
                   moment().isSame(moment(emailGroup.datetime), 'year') ? moment(emailGroup.datetime).format("MMM DD, h:mm a"): 
                   moment(emailGroup.datetime).format("dddd, MMMM Do YYYY, h:mm a")}</small>
               </div>
-              <small className={`text-muted ${toggles[emailGroup.id]?"":"d-none"}`}><strong>To</strong> {emailGroup.emailTo}</small>
+              <small className={`w-100 p-0 ow text-muted ${toggles[emailGroup.id]?"":"d-none"}`}><strong>To</strong>&nbsp;{emailGroup.emailTo}</small>
               <p className={`mb-1 ${toggles[emailGroup.id]?"":"text-truncate"}`}>{emailGroup.body}</p>
               {toggles[emailGroup.id] && !!emailGroup.attachment && ( 
                 <>
@@ -273,14 +275,14 @@ function App() {
                   onClick={()=>setToggles({...toggles, [reply.id]: toggles[reply.id]===undefined? true: !toggles[reply.id]})
                   } key={reply.id}
                 >
-                  <div className="d-flex w-100 justify-content-between">
-                    <div className="font-weight-bold mb-1">{reply.emailFrom}</div>                
-                    <small className="text-muted">{!!reply.attachment && <span className="d-inline-block attachment"></span>}
+                  <div className="d-flex flex-wrap flex-md-nowrap w-100 justify-content-between">
+                    <div className="w-100 ow font-weight-bold mb-1">{reply.emailFrom}</div>                
+                    <small className="w-100 text-muted text-md-right">{!!reply.attachment && <span className="d-inline-block attachment"></span>}
                       {moment().isSame(moment(reply.datetime), 'day') ? moment(reply.datetime).format("h:mm a") :
                       moment().isSame(moment(reply.datetime), 'year') ? moment(reply.datetime).format("MMM DD, h:mm a"): 
                       moment(reply.datetime).format("dddd, MMMM Do YYYY, h:mm a")}</small>
                   </div>
-                  <small className={`text-muted ${toggles[reply.id]?"":"d-none"}`}><strong>To</strong> {reply.emailTo}</small>
+                  <small className={`w-100 p-0 ow text-muted ${toggles[reply.id]?"":"d-none"}`}><strong>To</strong>&nbsp;{reply.emailTo}</small>
                   <p className={`mb-1 ${toggles[reply.id]?"":"text-truncate"}`}>{reply.body}</p>
                   {toggles[reply.id] && !!reply.attachment && ( 
                     <>
