@@ -31,11 +31,11 @@ hr {
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 100vh;
+  height: 60vh;
 }
 
 .table-ellipsis tbody .truncate {
-  max-width: 420px;
+  max-width: 180px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -72,7 +72,7 @@ tr.email-row:focus td{
   background: url(./assets/images/icon_clip.svg) bottom center/15px no-repeat;
 }
 .mail-sp{
-  width: 20px; height: 54px;
+  width: 15px; height: 54px;
   background: url(./assets/images/icon_mail_sp.svg) top left/15px 50px no-repeat;
 }
 
@@ -84,11 +84,13 @@ tr.email-row:focus td{
   border-bottom: 1px solid #dee2e6;
 }
 
-.mob-subject{
+.table-ellipsis tbody .truncate.mob-subject{
   font-size: 1.2rem;
+  max-width: 300px;
 }
 
 @media (min-width: 768px) {
+
   .table-ellipsis tbody .truncate {
     max-width: 150px;
   }

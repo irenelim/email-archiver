@@ -197,8 +197,8 @@ function App() {
               >
                 <td className="w-100">
                   <div className="container"><div className="row">
-                    <div className="col-1 mail-sp"></div>
-                    <div className="col-11">
+                    <div className="col-1 p-0 mail-sp"></div>
+                    <div className="col p-0">
 
                       <div className="d-flex justify-content-between align-items-center">   
                         <div className={`truncate font-weight-${isHighlight===initialHeader[0].id?"bold":"normal"}`}>
