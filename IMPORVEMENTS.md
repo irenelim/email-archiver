@@ -1,5 +1,5 @@
 ## Improvements
-- [ ] don't a complete system need navigation menu at least on it?
+- [ ] doesn't a complete system need navigation menu at least on it?
 - [ ] add `sender name`, `receiver name` next to their email.
 - [ ] confusion of badge purpose. `badge`+n, if it means the total times of communication on the same subject, `+` sign should be ommited, as the plus may indicate new or unread emails.
 - [ ] Clicking on the Header allow sorting, the **icon** of `asc` and `desc` need to be interchangable.
